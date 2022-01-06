@@ -1,0 +1,89 @@
+.derecha {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include tablet {
+        align-items: flex-end;
+    }
+}
+.modo-oscurito {
+    width: 3rem;
+    margin: 2rem 0;
+    filter: invert(100%);
+    cursor: pointer;
+    @include tablet {
+        margin-top: 0;
+    }
+    &:hover {
+        filter: invert(80%);
+    }
+}
+
+.barra {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 3rem;
+
+    @include tablet {
+       flex-direction: row;
+       justify-content: space-between;
+       align-items: flex-end ;
+    }
+}
+
+.navegacion {
+
+    visibility: hidden;
+    opacity: 0;
+    height: 0;
+    transition: visibility .1s ease-in-out, opacity .1s linear, height 5s linear;
+    
+
+    @include tablet {
+        visibility: visible;
+        opacity: 1;
+        display: flex;
+        margin-bottom: 2rem;
+    }
+
+    a {
+        color: $blanco;
+        text-decoration: none;
+        font-size: 2.2rem;
+        display: block;
+        text-align: center;
+
+        &:hover {
+            color: darken($blanco, 20);
+        }
+
+        @include tablet {
+            font-size: 2rem;
+            margin-right: 2rem;
+            &:last-of-type {
+                margin-right: 0;
+            } 
+        }
+    }
+}
+.mostrar {
+    visibility: visible;
+    opacity: 1;
+    height: auto;
+}
+
+//Menú de Salchichas
+
+.movil-menu {
+    @include tablet {
+        display: none;
+    }
+    img {
+        width: 5rem;
+    }
+    &:hover {
+        filter: invert(20%);
+    }
+}

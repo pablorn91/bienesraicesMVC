@@ -1,0 +1,48 @@
+.dark-mode {
+    background-color: darken($grisOscuro, 10);
+
+    p {
+        color: darken($gris, 45);
+    }
+
+    a, h1,h2,h3,h4 {
+        color: darken($blanco, 20);
+    }
+    .anuncio, .resumen-propiedad {
+        background-color: $grisOscuro;
+        border: 1px solid darken($grisOscuro, 10);
+
+        .precio {
+            color: $verde;
+        }
+        .icono {
+            filter: invert(60%);
+        }
+    }
+
+    .texto-nosotros blockquote {
+        color: darken($blanco, 20);
+    }
+
+    .formulario {
+        label,
+        legend,
+        p {
+            color: $gris;
+        }
+        input:not( [type="submit"] ), textarea , select {
+            background-color: $grisOscuro;
+            border: 1px solid $grisOscuro;
+            color: darken($blanco, 20);
+        }
+    }
+    //Modificar color de fuente de tabla admin
+    table.propiedades {
+    
+        tbody {
+            th {
+                color: $gris;
+            }
+        }
+    }
+}
